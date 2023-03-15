@@ -23,7 +23,7 @@ export const getProduct = (req, res) => {
 
 
 export const addProduct = (req, res) => {
-  const q =  "INSERT INTO `products` (`title`, `col_id`, `varanty`, `colorPallette`, `img`, `price`, `oldPrice`, `isNew`, `isDiscount`, `isFreecargo`, `ipektype`, `havHeight`, `amount`, `cat_id`) VALUES (?, ?, ?, ?, ?, ? ,?, ?, ?, ?, ?, ? ,?,?  )";
+  const q =  "INSERT INTO `products` (`title`, `col_id`, `varanty`, `colorPallette`, `img`, `price`, `oldPrice`, `isNew`, `isDiscount`, `isFreecargo`, `ipektype`, `havHeight`, `amount`, `cat_id`, `img2`, `img3`) VALUES (?, ?, ?, ?, ?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
   const values = [
     req.body.title,
     req.body.col_id,
@@ -39,6 +39,8 @@ export const addProduct = (req, res) => {
     req.body.havHeight,
     req.body.amount,
     req.body.cat_id,
+    req.body.img2,
+    req.body.img3,
   ];
   db.query(q, values, (err, data) => {
     if (err) return res.status(500).json(err);
@@ -64,7 +66,7 @@ export const deleteProduct = (req, res) => {
 
 export const updateProduct = (req, res) => {
   const productId = req.params.id;
-  const q = "UPDATE products SET title = ?, col_id = ?,  varanty=?, colorPallette=?, img=?, price=?, oldPrice=?, isNew=?, isDiscount=?, isFreecargo=?, ipektype=?, havHeight=?, amount=?, cat_id=? WHERE id = ?";
+  const q = "UPDATE products SET title = ?, col_id = ?,  varanty=?, colorPallette=?, img=?, price=?, oldPrice=?, isNew=?, isDiscount=?, isFreecargo=?, ipektype=?, havHeight=?, amount=?, cat_id=?, img2=?, img3=? WHERE id = ?";
   const values = [
     req.body.title,
     req.body.col_id,
@@ -80,6 +82,8 @@ export const updateProduct = (req, res) => {
     req.body.havHeight,
     req.body.amount,  
     req.body.cat_id,
+    req.body.img2,
+    req.body.img3,
   ];
 
   db.query(q, [...values, productId], (err, data) => {

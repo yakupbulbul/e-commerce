@@ -1,0 +1,14 @@
+.app{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.link{
+    text-decoration: none;
+    color:black;
+}

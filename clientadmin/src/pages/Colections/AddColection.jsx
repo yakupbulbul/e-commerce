@@ -7,7 +7,6 @@ const AddCategory = () => {
   const state = useLocation().state;
   const [title, setTitle] = useState(state?.desc || "");
   const [file, setFile] = useState(null);
-  const [selectedObjectId, setSelectedObjectId] = useState("");
 
 
 
@@ -37,7 +36,7 @@ const AddCategory = () => {
       await axios.post(`/colections`, {
              title: title,
              img: file ? imgUrl : "",
-             id: selectedObjectId,
+             cat_id,
 
           });
          navigate("/colections")
@@ -62,9 +61,12 @@ const AddCategory = () => {
 
 
 
-  const handleObjectSelection = (e) => {
+
+  const [cat_id, setCat_id] = useState("");
+
+  const handleCatSelection = (e) => {
     console.log(e.target.value);
-    setSelectedObjectId(e.target.value);
+    setCat_id(e.target.value);
   };
 
   return (
@@ -82,8 +84,8 @@ const AddCategory = () => {
           <input
             type="radio"
             value={parseInt(object.id)}
-            checked={parseInt(selectedObjectId) === object.id}
-            onChange={handleObjectSelection}
+            checked={parseInt(cat_id) === object.id}
+            onChange={handleCatSelection}
           />
           {object.title}
         </label>

@@ -24,9 +24,8 @@ const AddProduct = () => {
 
 //Image
   const [file, setFile] = useState(null);
-
-  const [selectedObjectId, setSelectedObjectId] = useState("");
-
+  const [file2, setFile2] = useState(null);
+  const [file3, setFile3] = useState(null);
 
 
 
@@ -45,9 +44,35 @@ const AddProduct = () => {
     }
   };
 
+  const upload2 = async () => {
+    try {
+      const formData = new FormData();
+      formData.append("file2", file2);
+      const res = await axios.post("/upload", formData);
+      console.log(res.data);
+      return res.data;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const upload3 = async () => {
+    try {
+      const formData = new FormData();
+      formData.append("file3", file3);
+      const res = await axios.post("/upload", formData);
+      console.log(res.data);
+      return res.data;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   const handleClick = async (e) => {
     e.preventDefault();
     const imgUrl = await upload();
+    const imgUrl2 = await upload2();
+    const imgUrl3 = await upload3();
 
     try {
       await axios.post(`/products`, {
@@ -65,6 +90,8 @@ const AddProduct = () => {
              havHeight,
              amount,  
              cat_id,
+             img2: file2 ? imgUrl2 : "",
+             img3: file3 ? imgUrl3 : "",
           });
          navigate("/products")
     } catch (err) {
@@ -121,13 +148,17 @@ const AddProduct = () => {
 
 
 
+
+
   const [cat_id, setCat_id] = useState("");
-  const [col_id, setCol_id] = useState("");
 
   const handleCatSelection = (e) => {
     console.log(e.target.value);
     setCat_id(e.target.value);
   };
+
+  const [col_id, setCol_id] = useState("");
+
   const handleColSelection = (e) => {
     console.log(e.target.value);
     setCol_id(e.target.value);
@@ -295,25 +326,26 @@ const AddProduct = () => {
             onChange={(e) => setFile(e.target.files[0])}
           />
           <label className="file" htmlFor="file">
+
           <h3>Resim Ekle</h3>
           </label>
 
           <input
             style={{ display: "none" }}
-            type="file"
-            id="file"
+            type="file2"
+            id="file2"
             name=""
-            onChange={(e) => setFile(e.target.files[0])}
+            onChange={(e) => setFile2(e.target.files[1])}
           />
           <label className="file" htmlFor="file">
            <h3>Resim Ekle</h3>
           </label>
           <input
             style={{ display: "none" }}
-            type="file"
-            id="file"
+            type="file3"
+            id="file3"
             name=""
-            onChange={(e) => setFile(e.target.files[0])}
+            onChange={(e) => setFile3(e.target.files[2])}
           />
           <label className="file" htmlFor="file">
            <h3>Resim Ekle</h3>

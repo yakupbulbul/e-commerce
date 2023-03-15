@@ -1,0 +1,97 @@
+.c-list {
+    width: 102%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-bottom: 10px;
+
+
+
+}
+
+.c-card {
+    margin-left: 15px;
+    height: 200px;
+    width: 370px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid lightgrey;
+    margin-right: 20px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, .5);
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+    position: relative;
+}
+
+
+
+.c-card:hover {
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, .7);
+    transform: scale(.97);
+    overflow: hidden;
+}
+
+.desc {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, .7);
+    width: 100%;
+    height: 100%;
+    transition: all .7s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+    gap: 3px;
+}
+
+.desc>p {
+    line-height: 24px;
+    height: 70%;
+}
+
+.c-card:hover .desc {
+    left: 0px;
+    transition: all .7s ease-in-out;
+    clip-path: circle(75%);
+}
+
+.c-card:hover img {
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+    transform: scale(1.6) rotate(20deg);
+    filter: blur(3px);
+}
+
+.col-img-wrapper{
+    height: 200px;
+    width: 370px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.col-img-wrapper>img {
+    height: 200px;
+    width: 370px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-sizing: border-box;
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+
+}
+
+.c-title {
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: white;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px 0px 15px 0px;
+    background-color: rgb(50, 47, 44);
+    z-index: 2;
+}

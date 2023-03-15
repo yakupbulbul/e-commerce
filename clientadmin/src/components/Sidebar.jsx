@@ -26,28 +26,14 @@ function Sidebar() {
           <Link className='link' to="/products"> 
           <h6>Ürünler</h6> 
           </Link>
+          <Link className='link' to="/users"> 
+          <h6>Kulanıcılar</h6> 
+          </Link>
 
-{/*           
-          <Link className='link' to="/?cat=science"> 
-          <h6>SCIENCE</h6> 
-          </Link>
-          <Link className='link' to="/?cat=tecnology"> 
-          <h6>TECHNOLOGY</h6> 
-          </Link>
-          <Link className='link' to="/?cat=cinema"> 
-          <h6>CINEMA</h6> 
-          </Link>
-          <Link className='link' to="/?cat=design"> 
-          <h6>DESIGN</h6> 
-          </Link>
-          <Link className='link' to="/?cat=food"> 
-          <h6>FOOD</h6> 
-          </Link> */}
+
           <h6>{currentUser?.username}</h6>
 
           {currentUser ?  <h6 onClick={logout}>Logout</h6> : <Link className='link' to="/login">Login</Link>}
-
-          <h6 className='write'><Link className='"link' to="/addcat">Write</Link></h6>
         </div>
       
     </div>

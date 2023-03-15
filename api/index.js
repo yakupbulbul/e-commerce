@@ -34,7 +34,7 @@ app.use(cookieParser());
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "../client/public/upload");
+    cb(null, "../clientadmin/public/upload");
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + file.originalname);

@@ -64,6 +64,8 @@ const Product = () => {
                   <div>{product.ipektype}</div>
                   <div>{product.havHeight}</div>
                   <img src={`../upload/${product.img}`} alt="" />
+                  <img src={`../upload/${product.img2}`} alt="" />
+                  <img src={`../upload/${product.img3}`} alt="" />
                   <div className="edit">
                   <Link to={`/update/product/${product.id}`} state={product}>
                      <img src={Edit} alt="" />

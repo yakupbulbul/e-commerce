@@ -29,10 +29,13 @@ import UpdateColection from "./pages/Colections/UpdateColection";
 
 // Urun
 
-//Category
 import Product from "./pages/Products/Product";
 import AddProduct from "./pages/Products/AddProduct";
 import UpdateProduct from "./pages/Products/UpdateProduct";
+
+//User
+
+import Users from "./pages/Users/Users";
 
 
 
@@ -58,7 +61,7 @@ const Layout = () => {
       </div>
       {/* <Navbar/> */}
       <Outlet/>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }
@@ -121,6 +124,10 @@ function App() {
         {
           path: "/update/product/:id",
           element: <UpdateProduct/>,
+        },
+        {
+          path: "/users",
+          element: <Users/>,
         },
       ]
     },
