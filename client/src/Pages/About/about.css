@@ -1,0 +1,31 @@
+/* Set the font family and size for the entire page */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  height: 20vw;
+}
+
+.about{
+    height: 70vh;
+}
+
+/* Style the main heading */
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Style the paragraphs */
+p {
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Add some padding to the top and bottom of the page */
+.container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

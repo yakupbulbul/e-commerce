@@ -3,7 +3,7 @@
     position: sticky;
     top: 0px;
     height: 120px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     gap: 10%;
     border-bottom: 1px solid black;
@@ -12,13 +12,15 @@
 }
 
 
-@media only screen and (max-width:800px){
-    .navbar .links-container{
-        display: none;
+@media screen and (max-width: 992px) {
+    .navbar-links-container {
+      display: none;
     }
+  
 }
 
-.logo-container{
+
+.navbar-logo-container{
     display: flex;
     width: 15vw;
     object-fit: cover;
@@ -28,7 +30,7 @@
     height: 100%;
 }
 
-.links-container {
+.navbar-links-container {
     border: none;
     display: flex;
     flex-direction: column;
@@ -56,15 +58,17 @@
 }
 
 .lItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none; 
     display: flex;
-
     gap: 1px;
 
 }
 
 
-.left-container {
+.navbar-left-container {
 
     display: flex;
     flex-direction: column;
@@ -114,6 +118,7 @@
 .blItems {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1px;
     cursor: pointer;
 }

@@ -25,10 +25,10 @@ import EmailIcon from '@mui/icons-material/Email';
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <div className="logo-container">
+      <div className="navbar-logo-container">
         <img src="/img/logo2.png" alt="" className="logo" />
       </div>
-      <div className="links-container">
+      <div className="navbar-links-container">
         <div className="l-wrapper">
 
           <div className="lItems">
@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
         <Searchbutton />
       </div>
-      <div className="left-container">
+      <div className="navbar-left-container">
         <div className="social-wrapper">
           <FacebookIcon className='F'/>
           <TwitterIcon className='T'/>

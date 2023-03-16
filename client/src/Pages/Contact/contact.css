@@ -1,0 +1,77 @@
+.contact{
+    height: 100vh;
+    width: 80vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+
+
+}
+.contact-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.contact-title{
+    font-size: 1.5rem;
+    color: #4d4849;
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px;
+
+    padding: 10px;
+
+}
+
+
+.contact-info-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+
+
+  
+  
+}
+
+.contact-info-list-item{
+    display: flex;
+    align-items: center;
+    gap: 15vw;
+    padding: 10px 10px;
+    border-bottom: 1px solid #999;
+   
+}
+
+.contact-info-list-title{
+   color: black;
+   font-weight: bold;
+   font-size: .7em;
+   width: 10vw;
+}
+.contact-info, .contact-info-tel, .contact-info-mail{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center ;
+    width: 10vw;
+    color: black;
+    font-weight: 300;
+    font-size: .7em;
+}
+
+.contact-info-tel, .contact-info-mail{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contact-info-tel:hover,.contact-info-mail:hover{
+    color: rgb(208, 255, 0);
+}
+
+.bank-account-item{
+    margin-top: 20px;
+}

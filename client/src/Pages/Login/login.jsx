@@ -1,41 +1,89 @@
 import React from 'react'
-import LoginIcon from '@mui/icons-material/Login';
-import "./login.css"
 
+import "./login.css"
+import { useState, useEffect } from 'react'
 
 const Login = () => {
-    return (
-        <div className='login-page'>
-            <div className="login-form-container">
-                <div className="login-logo-container">
-                    <div className="login-logo">
-                        <LoginIcon/>
+    const [index, setIndex] = useState(0);
+    useEffect(() => {
+
+    }, [index])
+
+    const Login = () => {
+        return (
+
+            <div className='login-row'>
+                <form className='login-form'>
+                    <input
+                        type="email"
+                        placeholder="E-Posta"
+                        onChange=""
+                        required />
+                    <input
+                        type="password"
+                        placeholder="Şifre"
+                        onChange=""
+                        required />
+                    <button type="submit">Giriş Yap</button>
+
+                    <div className="login-row2-col1">
+                        Şifremi Unuttum
                     </div>
-                    <div className="login-title">
-                        Üye Girişi
-                    </div>
-                </div>
-                <form action="" className='form-container'>
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname" />
-                    <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname" />
                 </form>
-                <div className="login-buttons-container">
-                    <div className="login-remember-me-container">
-                        beni hatırla
-                    </div>
-                    <div className="login-forgot-passwd-container">
-                        şifremi unuttum
-                    </div>
+            </div>
+
+        )
+    }
+
+    const Sign = () => {
+        return (
+            <div className="signup-row">
+                <form className='sign-form'>
+                    <input
+                        type="text"
+                        placeholder="İsim ve Soyisim"
+                        onChange=""
+                        required />
+                    <input
+                        type="email"
+                        placeholder="E-posta"
+                        onChange=""
+                        required />
+                    <input
+                        type="text"
+                        placeholder="Telefon Numarası"
+                        onChange=""
+                        required />
+                    <input
+                        type="password"
+                        placeholder="Şifre"
+                        onChange=""
+                        required />
+                    <button type="submit">Kayıt Ol</button>
+
+
+                </form>
+            </div>
+        )
+    }
+    const mainColor  = '#22A2D1';
+
+    const borderColorLogin = index === 0 ? mainColor  : 'white';
+    const borderColorSign = index === 1 ? mainColor : 'white';
+
+    return (
+        <div className='form-page'>
+            <div className="form-container">
+                <div className="form-logo">
+                    <img src="/img/logo2.png" alt="" className="logo" />
+                </div>
+                <div className="form-row1">
+                    <div style={{ borderColor: borderColorLogin, color: index === 0 ? mainColor: '#9DA7B2' }} className="form-row1-col1" onClick={() => setIndex(0)}>Giriş Yap</div>
+                    <div style={{ borderColor: borderColorSign, color: index === 1 ? mainColor : '#9DA7B2' }} className="form-row1-col2" onClick={() => setIndex(1)}>Yeni Misin?</div>
 
                 </div>
-                <div className="login-button">
-                    Giriş Yap
-                </div>
-                <div className="login-register-button">
-                    Hesabınız yoksa üye olmak için tıklayınız
-                </div>
+                {index === 0 ? <Login /> : <Sign />}
+
             </div>
 
         </div>

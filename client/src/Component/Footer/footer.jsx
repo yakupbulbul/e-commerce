@@ -39,7 +39,7 @@ const Footer = () => {
       </div>
       <div className="column-footer">
         <span className="title-footer">Müşteri Hizmetleri</span>
-        <Link className='Link' to='/'>- Hakkımızda</Link>
+        <Link className='Link' to='/about/'>- Hakkımızda</Link>
         <Link className='Link' to='/'>- İletişim</Link>
         <Link className='Link' to='/'>- K.V.K.K.</Link>
         <Link className='Link' to='/'>- Bayilik Başvurusu</Link>
