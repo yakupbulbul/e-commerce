@@ -1,4 +1,5 @@
 import React from 'react'
+import Map from '../../Component/Map/Map'
 
 import './contact.css'
 
@@ -6,8 +7,6 @@ const Contact = () => {
   return (
     <div className='contact'>
       <div className="contact-info-wrapper">
-
-
         <div className="contact-title">
           İletişim
         </div>
@@ -57,12 +56,9 @@ const Contact = () => {
 
           </div>
 
-
-
-
           <div className="contact-info-list-item">
             <div className="contact-info-list-title">
-            Şehir
+              Şehir
             </div>
             <div className="contact-info">
               Kayseri
@@ -74,7 +70,7 @@ const Contact = () => {
 
           <div className="contact-info-list-item">
             <div className="contact-info-list-title">
-            Vergi No
+              Vergi No
             </div>
             <div className="contact-info">
               3274t81324
@@ -85,30 +81,19 @@ const Contact = () => {
 
           <div className="contact-info-list-item">
             <div className="contact-info-list-title">
-            Vergi Dairesi
+              Vergi Dairesi
             </div>
             <div className="contact-info">
-            Beşiktaş
+              Beşiktaş
             </div>
 
           </div>
           <div className="contact-info-list-item">
             <div className="contact-info-list-title">
-            Vergi Dairesi
+              Vergi Dairesi
             </div>
             <div className="contact-info">
-            Beşiktaş
-            </div>
-
-          </div>
-
-
-          <div className="contact-info-list-item">
-            <div className="contact-info-list-title">
-            Vergi Dairesi
-            </div>
-            <div className="contact-info">
-            Beşiktaş
+              Beşiktaş
             </div>
 
           </div>
@@ -116,20 +101,31 @@ const Contact = () => {
 
           <div className="contact-info-list-item">
             <div className="contact-info-list-title">
-            Vergi Dairesi
+              Vergi Dairesi
             </div>
             <div className="contact-info">
-            Beşiktaş
+              Beşiktaş
+            </div>
+
+          </div>
+
+
+          <div className="contact-info-list-item">
+            <div className="contact-info-list-title">
+              Vergi Dairesi
+            </div>
+            <div className="contact-info">
+              Beşiktaş
             </div>
 
           </div>
 
           <div className="contact-info-list-item">
             <div className="contact-info-list-title">
-            Vergi Dairesi
+              Vergi Dairesi
             </div>
             <div className="contact-info">
-            Beşiktaş
+              Beşiktaş
             </div>
 
           </div>
@@ -138,6 +134,9 @@ const Contact = () => {
           Banka Hesapları
         </div>
       </div>
+    <div className="map-container">
+      <Map/>
+    </div>
     </div>
   )
 }
